@@ -15,7 +15,7 @@
 		http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 	<!-- Add support for component scanning -->
-	<context:component-scan base-package="com.crud.app.controllers" />
+	<context:component-scan base-package="com.crud.app.controllers,com.crud.app.dao,com.crud.app.services" />
 
 	<!-- Add support for conversion, formatting and validation support -->
 	<mvc:annotation-driven/>
@@ -46,7 +46,7 @@
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="myDataSource" />
-		<property name="packagesToScan" value="com.crud.app.controllers" />
+		<property name="packagesToScan" value="com.crud.app.controllers,com.crud.app.entities" />
 		<property name="hibernateProperties">
 		   <props>
 		      <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
@@ -67,7 +67,8 @@
 	<!-- Add support for reading web resources: css, images, js, etc ... -->
 	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 	
-	
+	<!-- Entry to the css folder -->
+	<mvc:resources location="/assets/" mapping="/assets/**"></mvc:resources>
 	
 </beans>
 
