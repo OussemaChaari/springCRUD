@@ -2,7 +2,6 @@ package com.crud.app.dao;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
