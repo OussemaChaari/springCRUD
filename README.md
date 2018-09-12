@@ -1,7 +1,6 @@
 # springCRUD
 A simple CRUD web app for managing Customers
 
-This project is considered as handshake with the springMVC/hibernate.\
 Funcionality: The function call goes from the controller to the Service layer, which delegates the interaction with the database to
 the DAO (this refactoring might be skipped in this project, but it's a good practice to have a Service->DAO in case of multiple DBs).
 
